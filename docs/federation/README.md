@@ -239,11 +239,7 @@ context, strips image references that are outside the source allowlist and
 links back to the exact version and upstream license.
 
 **Critical claim boundary:** Gnosix is experimental/pre-release; R19
-whole-product acceptance is open. The upstream README/LICENSE declare GPL,
-while `docs/status/STATUS.md` still lists repository-wide license
-ratification as pending. The discrepancy is displayed on the landing page,
-not papered over or treated as a release pass. Runtime receipt digests are
-provenance references, not public audit bundles.
+whole-product acceptance is open. The upstream README/LICENSE at pinned commit `23c71dd231b5bc3c41425e848367211fc0fd8d53` declare MIT for first-party material. The upstream `docs/status/STATUS.md` still contains an older, unresolved license-ratification statement; treat it as historical source text requiring an upstream correction, not as current licensing authority. Third-party licenses remain independent. Runtime receipt digests are provenance references, not public audit bundles.
 
 The user-owned VPS watcher supports both upstream manifest entries and
 produces two independent rows in its read-only JSON receipt. The
