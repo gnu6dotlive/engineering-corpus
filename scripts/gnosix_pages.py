@@ -47,8 +47,8 @@ def landing(lang,m):
     cards=''.join('<article class="g6-record"><div class="g6-record__head">'+
         state("experimental",status)+'</div><h2>'+html.escape(name)+'</h2><p>'+
         html.escape(detail)+'</p></article>' for status,name,detail in records)
-    license_warning=("À réconcilier dans le dépôt source : README et LICENSE déclarent la GPL-3.0-or-later, tandis que la page STATUS énumère encore une ratification de licence inachevée. Le portail ne prend pas position sur la clôture de cette obligation."
-       if fr else "Source discrepancy pending reconciliation: README and LICENSE declare GPL-3.0-or-later, while STATUS still lists license ratification as unfinished. The portal does not close that upstream obligation.")
+    license_warning=("Licence MIT du code et de la documentation propriétaires Gnosix ; les composants tiers conservent leurs licences et notices respectives."
+       if fr else "First-party Gnosix code and documentation are MIT-licensed; third-party components retain their own licenses and notices.")
     info=("Documents originaux en anglais, liés au commit exact et validés par SHA-256. Les reçus d'exécution privés ne sont pas republiés."
           if fr else "Original English source documents, commit-pinned and SHA-256 verified. Private runtime receipts are not republished.")
     body=(f'<section class="g6-section"><div class="g6-ledger">{cards}</div></section>'
@@ -78,10 +78,10 @@ def build_pages(dist,locales,edition,render_markdown):
             page_title="Gnosix / "+label
             desc=("Document technique source en anglais, version Git exacte. Statut expérimental; aucune release stable."
                   if lang=="fr" else "Original English source, exact pinned Git revision. Experimental; no stable release.")
-            provenance=('<section class="g6-notice"><span class="g6-label">SOURCE / GPL-3.0-or-later</span>'
+            provenance=('<section class="g6-notice"><span class="g6-label">SOURCE / MIT</span>'
                        f'<p><code>{m["source_ref"]}</code> · <code>sha256:{m["files"][source]}</code></p>'
                        f'<p><a href="{html.escape(source_href(m,source),quote=True)}">{"Source GitHub" if lang=="fr" else "Original GitHub source"}</a> · '
-                       f'<a href="{html.escape(source_href(m,"LICENSE"),quote=True)}">GPL-3.0-or-later / licence upstream</a></p>'
+                       f'<a href="{html.escape(source_href(m,"LICENSE"),quote=True)}">MIT / licence upstream</a></p>'
                        '</section>')
             notice=('<section class="g6-section"><p class="g6-label">'+
                     ("Document source anglais (original, non traduit)" if lang=="fr"

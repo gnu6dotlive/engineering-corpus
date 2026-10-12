@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pinned GPLv3 Gnosix Markdown snapshots; no mutable refs or runtime fetching."""
+"""Pinned MIT Gnosix Markdown snapshots; no mutable refs or runtime fetching."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -27,7 +27,7 @@ def validate(manifest):
     files=manifest.get("files")
     if not isinstance(files,dict) or set(files)!=set(FILES) or not all(SHA64.fullmatch(x) for x in files.values()):
         raise ValueError("Gnosix Markdown allowlist or SHA drift")
-    if manifest.get("source_license") != "GPL-3.0-or-later":
+    if manifest.get("source_license") != "MIT":
         raise ValueError("missing source attribution/license boundary")
 
 def verify():
@@ -62,7 +62,7 @@ def sync(checkout, ref):
         data.decode("utf-8")
         blobs[rel]=data
     manifest={"schema":"gnu6.federation.pinned-markdown.v1","repository":REPO,"source_ref":ref,
-       "branch_observed":"main","source_license":"GPL-3.0-or-later",
+       "branch_observed":"main","source_license":"MIT",
        "mode":"reviewed immutable GitHub snapshot; no live fetch or automatic publishing",
        "files":{rel:hashlib.sha256(data).hexdigest() for rel,data in blobs.items()}}
     for rel,data in blobs.items():

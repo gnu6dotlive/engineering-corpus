@@ -218,7 +218,7 @@ and frozen as a unit-file regression test.
 
 - **Source #1:** `tension-atoi/gnostral.rs` (MIT first-party material),
   with 7 source-owned Markdown documents.
-- **Source #2:** `tension-atoi/gnosix` (upstream GPL-3.0-or-later declaration),
+- **Source #2:** `tension-atoi/gnosix` (upstream MIT declaration),
   with 5 source-owned Markdown documents.
 - **Publisher:** `tension-atoi/engineering-corpus`, explicitly disabled as
   an upstream source to prevent self-ingestion loops.
