@@ -17,9 +17,9 @@ MANIFEST=ROOT/"docs/federation/gnosix/manifest.json"
 class TestGnosixFederation(unittest.TestCase):
     def test_exact_gnosix_public_revision_and_source_license(self):
         m=federate_gnosix.verify()
-        self.assertEqual(m["source_ref"],"d0dfb1c1115db2f9761703b866fb6e316ea6c1cd")
+        self.assertEqual(m["source_ref"],"23c71dd231b5bc3c41425e848367211fc0fd8d53")
         self.assertEqual(m["repository"],"https://github.com/tension-atoi/gnosix")
-        self.assertEqual(m["source_license"],"GPL-3.0-or-later")
+        self.assertEqual(m["source_license"],"MIT")
         self.assertEqual(len(m["files"]),5)
 
     def test_modified_blob_refused(self):
@@ -70,7 +70,7 @@ class TestGnosixFederation(unittest.TestCase):
         self.assertIn("stable",raw)
         # Preserve an upstream editorial inconsistency visibly rather than rewriting it.
         self.assertIn("license has not yet been ratified",raw)
-        self.assertIn("GPL-3.0-or-later",(ROOT/"docs/federation/gnosix/content/README.md").read_text())
+        self.assertIn("MIT",(ROOT/"docs/federation/gnosix/content/README.md").read_text())
 
 if __name__=="__main__":
     unittest.main()

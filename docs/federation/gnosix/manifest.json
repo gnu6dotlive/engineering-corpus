@@ -1,7 +1,7 @@
 {
   "branch_observed": "main",
   "files": {
-    "README.md": "83f8eb9a255268b9719204e122b33aa3831d660b24cd5726ff1337ac0dc2d6f8",
+    "README.md": "fbc00ce3f16c8fa85a680609bc29c6bc2fa057bdd499e5c3392cdd137f6c7b1f",
     "docs/evidence/CURRENT.md": "b38cc09dc185d81028cb9b3687ded846936df5753e93edb16df24b6d13b23a01",
     "docs/evidence/README.md": "7c348189323f2271a28c03893624d20d83d058e5bd0e555a1014ccbe6f083c3e",
     "docs/status/ROADMAP.md": "e9afdeea901f8b3a998ec701c34075555e3a8ee9fbbc006e862b8fea709b63eb",
@@ -10,6 +10,6 @@
   "mode": "reviewed immutable GitHub snapshot; no live fetch or automatic publishing",
   "repository": "https://github.com/tension-atoi/gnosix",
   "schema": "gnu6.federation.pinned-markdown.v1",
-  "source_license": "GPL-3.0-or-later",
-  "source_ref": "d0dfb1c1115db2f9761703b866fb6e316ea6c1cd"
+  "source_license": "MIT",
+  "source_ref": "23c71dd231b5bc3c41425e848367211fc0fd8d53"
 }
