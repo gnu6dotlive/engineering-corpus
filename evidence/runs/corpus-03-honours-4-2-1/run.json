@@ -1,6 +1,6 @@
 {
-  "source_commit": "3ac345965d645f0f8965093ff54484aaa35b1eaa",
-  "utc": "2026-10-20T20:38:15.867599+00:00",
+  "source_commit": "72aa83c17ce0f792a8fb0a703b37cb184738d250",
+  "utc": "2026-10-20T20:38:41.856603+00:00",
   "environment": {
     "python": "3.14.8 (main, Oct 13 2026, 10:33:10) [GCC 16.2.1 20260810]",
     "platform": "Linux-7.2.9-2-cachyos-bore-lto-x86_64-with-glibc2.44"
@@ -13,22 +13,22 @@
         "--no-hardlinks",
         "--no-checkout",
         "/home/tension_atoi/engineering-corpus",
-        "/tmp/corpus-clean-d38nsau_/checkout"
+        "/tmp/corpus-clean-k5mlgkrf/checkout"
       ],
       "exit_code": 0,
       "stdout": "",
-      "stderr": "Cloning into '/tmp/corpus-clean-d38nsau_/checkout'...\ndone.\n"
+      "stderr": "Cloning into '/tmp/corpus-clean-k5mlgkrf/checkout'...\ndone.\n"
     },
     {
       "command": [
         "git",
         "checkout",
         "--detach",
-        "3ac345965d645f0f8965093ff54484aaa35b1eaa"
+        "72aa83c17ce0f792a8fb0a703b37cb184738d250"
       ],
       "exit_code": 0,
       "stdout": "",
-      "stderr": "HEAD is now at 3ac3459 the corpus honours the system at 4.2.1\n"
+      "stderr": "HEAD is now at 72aa83c the built pages carry the sheet at 4.2.1\n"
     },
     {
       "command": [
@@ -45,7 +45,7 @@
         "/usr/bin/python3",
         "-m",
         "venv",
-        "/tmp/corpus-clean-d38nsau_/checkout/.venv"
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv"
       ],
       "exit_code": 0,
       "stdout": "",
@@ -53,7 +53,7 @@
     },
     {
       "command": [
-        "/tmp/corpus-clean-d38nsau_/checkout/.venv/bin/python",
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
         "-m",
         "pip",
         "install",
@@ -70,7 +70,7 @@
     },
     {
       "command": [
-        "/tmp/corpus-clean-d38nsau_/checkout/.venv/bin/python",
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
         "-m",
         "pip",
         "freeze",
@@ -82,7 +82,7 @@
     },
     {
       "command": [
-        "/tmp/corpus-clean-d38nsau_/checkout/.venv/bin/python",
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
         "scripts/check.py"
       ],
       "exit_code": 0,
@@ -91,11 +91,82 @@
     },
     {
       "command": [
-        "/tmp/corpus-clean-d38nsau_/checkout/.venv/bin/python",
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
         "scripts/build.py"
       ],
       "exit_code": 0,
       "stdout": "BUILD_OK pages=92 assets=3\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
+        "scripts/build.py"
+      ],
+      "exit_code": 0,
+      "stdout": "BUILD_OK pages=92 assets=3\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
+        "scripts/check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "STUDY_EVIDENCE_PASS bilingual=2 artifacts=2 prereg=PINNED privacy=PASS tamper=REJECTED status=DRAFT\nEXPERIMENT_REGISTRY_PASS entries=3 locales=2 sources=3 gates=11 authority=DENIED falsifiers=4 rejected\nSCIENTIFIC_CHALLENGES_PASS studies=4 locales=2 forge=GITHUB_PUBLIC kits=PARTIAL falsifiers=2 rejected\nCUDA05G_STATIC_PUBLICATION_PASS sha256=0e8eaf75069d7be1 locales=2 preserved_prereg=PASS original_runtime=BLOCKED\nCUDA05H_SITE_CROSSCHECK_PASS pages=2 prereg=PINNED source=12 manifest=PASS gpu_claim=BOUNDED\nGNU6_DESIGN_PASS version=4.2.1 files=11 orange_fills=0\nGNU6_SPINE_DOCS_PASS 90 pages 3 assets\nGNU6_CONTEXT_DOCS_PASS 90 pages 3 assets\nDOCS_NO_VEIL_BFCACHE_PASS source_and_dist=2\nCORPUS_EXPORT_TEST_PASS 18\nCORPUS_CHECK_OK locales=2 chapters=8 labs=3 html=92 scope=source_static_and_experiment_provenance\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
+        "scripts/test_hub.py"
+      ],
+      "exit_code": 0,
+      "stdout": "SCIENCE_PORTAL_HUB_PASS locales=2 guide_refs=1 guide_source_paths=4 release_tags=0 api_refs=1 sdk_refs=0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
+        "scripts/test_checks.py"
+      ],
+      "exit_code": 0,
+      "stdout": "CHECKER_NEGATIVE_OK fixtures=6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
+        "scripts/test_labs.py"
+      ],
+      "exit_code": 0,
+      "stdout": "LABS_OK positive=2 expected_negative=2\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/corpus-clean-k5mlgkrf/checkout/.venv/bin/python",
+        "examples/workspace_lab.py",
+        "--output",
+        "/tmp/corpus-clean-k5mlgkrf/workspace-evidence"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"lab\": \"EC-L03\",\n  \"result\": \"PASS\",\n  \"utc\": \"2026-10-20T20:38:49.801739+00:00\",\n  \"sandbox\": \"/tmp/corpus-clean-k5mlgkrf/workspace-evidence/corpus-fictional-h2vczah5\",\n  \"baseline\": \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\",\n  \"slice_head\": \"40b7edcfca910668e170370dba4b4e9a6220f0d4\",\n  \"other_head\": \"8d93253b635d675525b2a15f8180de347055558e\",\n  \"preserved_hashes\": {\n    \"tracked.txt\": \"f67116d185d8a58471ede87d5ae18735bd4acc350d06bfbd09639a78784040e0\",\n    \"notes.txt\": \"f7a503a2a286b8753301d2261e0f0f1445ea39c8acbc8d7f88aaf5b3ffc68ab5\"\n  },\n  \"preserved_index\": \"staged work\",\n  \"divergence\": [\n    1,\n    1\n  ],\n  \"commands\": [\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"init\",\n        \"-b\",\n        \"main\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"Initialized empty Git repository in /tmp/corpus-clean-k5mlgkrf/workspace-evidence/corpus-fictional-h2vczah5/courier/.git/\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"add\",\n        \"tracked.txt\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"commit\",\n        \"-m\",\n        \"fictional baseline\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"[main (root-commit) 3ad2fba] fictional baseline\\n 1 file changed, 1 insertion(+)\\n create mode 100644 tracked.txt\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"rev-parse\",\n        \"HEAD\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"add\",\n        \"tracked.txt\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"show\",\n        \":tracked.txt\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"staged work\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"status\",\n        \"--porcelain\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"MM tracked.txt\\n?? notes.txt\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"worktree\",\n        \"add\",\n        \"-b\",\n        \"slice\",\n        \"/tmp/corpus-clean-k5mlgkrf/workspace-evidence/corpus-fictional-h2vczah5/slice\",\n        \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"HEAD is now at 3ad2fba fictional baseline\\n\",\n      \"stderr\": \"Preparing worktree (new branch 'slice')\\n\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"add\",\n        \"slice.txt\"\n      ],\n      \"cwd\": \"slice\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"commit\",\n        \"-m\",\n        \"fictional slice\"\n      ],\n      \"cwd\": \"slice\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"[slice 40b7edc] fictional slice\\n 1 file changed, 1 insertion(+)\\n create mode 100644 slice.txt\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"rev-parse\",\n        \"HEAD\"\n      ],\n      \"cwd\": \"slice\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"40b7edcfca910668e170370dba4b4e9a6220f0d4\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"worktree\",\n        \"add\",\n        \"-b\",\n        \"other\",\n        \"/tmp/corpus-clean-k5mlgkrf/workspace-evidence/corpus-fictional-h2vczah5/other\",\n        \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"HEAD is now at 3ad2fba fictional baseline\\n\",\n      \"stderr\": \"Preparing worktree (new branch 'other')\\n\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"add\",\n        \"other.txt\"\n      ],\n      \"cwd\": \"other\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"commit\",\n        \"-m\",\n        \"fictional divergence\"\n      ],\n      \"cwd\": \"other\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"[other 8d93253] fictional divergence\\n 1 file changed, 1 insertion(+)\\n create mode 100644 other.txt\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"rev-parse\",\n        \"HEAD\"\n      ],\n      \"cwd\": \"other\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"8d93253b635d675525b2a15f8180de347055558e\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"merge-base\",\n        \"--is-ancestor\",\n        \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\",\n        \"40b7edcfca910668e170370dba4b4e9a6220f0d4\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"merge-base\",\n        \"--is-ancestor\",\n        \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\",\n        \"8d93253b635d675525b2a15f8180de347055558e\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"merge-base\",\n        \"--is-ancestor\",\n        \"40b7edcfca910668e170370dba4b4e9a6220f0d4\",\n        \"8d93253b635d675525b2a15f8180de347055558e\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 1,\n      \"exit_code\": 1,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"merge-base\",\n        \"--is-ancestor\",\n        \"8d93253b635d675525b2a15f8180de347055558e\",\n        \"40b7edcfca910668e170370dba4b4e9a6220f0d4\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 1,\n      \"exit_code\": 1,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"rev-list\",\n        \"--left-right\",\n        \"--count\",\n        \"40b7edcfca910668e170370dba4b4e9a6220f0d4...8d93253b635d675525b2a15f8180de347055558e\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"1\\t1\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"merge-base\",\n        \"40b7edcfca910668e170370dba4b4e9a6220f0d4\",\n        \"8d93253b635d675525b2a15f8180de347055558e\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"show\",\n        \":tracked.txt\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"staged work\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"status\",\n        \"--porcelain\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"MM tracked.txt\\n?? notes.txt\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"rev-parse\",\n        \"HEAD\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"worktree\",\n        \"list\",\n        \"--porcelain\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"worktree /tmp/corpus-clean-k5mlgkrf/workspace-evidence/corpus-fictional-h2vczah5/courier\\nHEAD 3ad2fba17f0f4faa654510ae6e621e73a75c9bb8\\nbranch refs/heads/main\\n\\nworktree /tmp/corpus-clean-k5mlgkrf/workspace-evidence/corpus-fictional-h2vczah5/other\\nHEAD 8d93253b635d675525b2a15f8180de347055558e\\nbranch refs/heads/other\\n\\nworktree /tmp/corpus-clean-k5mlgkrf/workspace-evidence/corpus-fictional-h2vczah5/slice\\nHEAD 40b7edcfca910668e170370dba4b4e9a6220f0d4\\nbranch refs/heads/slice\\n\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"command\": [\n        \"git\",\n        \"-c\",\n        \"core.hooksPath=/dev/null\",\n        \"-c\",\n        \"commit.gpgsign=false\",\n        \"log\",\n        \"--all\",\n        \"--graph\",\n        \"--oneline\"\n      ],\n      \"cwd\": \"courier\",\n      \"expected_exit\": 0,\n      \"exit_code\": 0,\n      \"stdout\": \"* 8d93253 fictional divergence\\n| * 40b7edc fictional slice\\n|/  \\n* 3ad2fba fictional baseline\\n\",\n      \"stderr\": \"\"\n    }\n  ],\n  \"limits\": [\n    \"Fictional repository only\",\n    \"No merge/rebase/conflict/submodule coverage\",\n    \"Backups and worktrees retained; no destructive cleanup\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "docs",
+        "dist",
+        "scripts",
+        "examples"
+      ],
+      "exit_code": 0,
+      "stdout": "",
       "stderr": ""
     }
   ],
@@ -104,5 +175,176 @@
     "CPython 3.14 Linux x86_64 wheel lock",
     "Browser and editorial gates recorded separately",
     "No deployment or WCAG certification"
-  ]
+  ],
+  "result": "PASS",
+  "clean_checkout": true,
+  "isolated_environment": true,
+  "committed_dist_matches": true,
+  "rebuilds_identical": true,
+  "dist_sha256": {
+    "404.html": "8d6698907c69b8a761c9345ed9ce2b8267104847fceb1d8fcc7733995ac8765c",
+    "app.js": "9c5bd431aa33058036b9f8ee8bcfa25d9d3e439245cb1bd2b861f9adf00120d1",
+    "challenges/CONTRIBUTING.md": "62a22cb956d73f0292e26892f3e2189b9d812ac5a0f9f7ac07cc222c8e23d774",
+    "challenges/PROVENANCE.json": "2c86c3e7197555a17171ed5b325ff9f1ba66a567051edc161107ae624c37fd25",
+    "challenges/protocols/CUDA-05E-PREREG.md": "2e83c87c7c409fee84faf037e76ce9f8eda8e95724d1625fa3004c7fa6b6cc60",
+    "challenges/protocols/CUDA-05F-PREREG.md": "f59e14252120bb6e66883c955b4193d25fd49e995b87c988307d62b9f22f0a5a",
+    "challenges/registry.json": "54ac7d6d576483a98e65aa24a09a471b1dcfad893b7a75c608c51472929a285f",
+    "context/context-adapter.js": "123e0c0d6f8ab178bb7d2ade4657189f415f433804225e3680442fb51c4fd9f5",
+    "context/context-core.js": "197ff4c2253ec200de11b3ffcf45dcee8342c1b7eb6906b1a39b99ee925ecadf",
+    "context/context-menu.css": "ce24c930539424cc1655f9846cffccd73418f541f8f89c666b9555162a398268",
+    "context/context.lock.json": "b6a2e59d7e4f57ff698f9efe31fbc38a564d5ee38ea2c1d2b923e23d560cba97",
+    "diagrams/authority.svg": "0115d3a09dec701d783ae6e0a34862c6db390c69842d8a44afecce64ef5e0f7d",
+    "diagrams/knowledge.svg": "3fecb479d27b600fee9fda3576f017bd29e384cfb969724f9aef49a7c2741bd6",
+    "diagrams/lifecycle.svg": "b54d27740d4ccc4f0a4fabbaac34bb4780a0fdbe0588f53bc67c6d252b04ef6e",
+    "ecosystem/catalog.json": "f6558c32d550d05346f5e9eacc9a7254ef59156221d5d08fb2ed3d7703e56492",
+    "en/api.html": "c7de1b61003cae14e09a2205dda2c8b2a88c30261bf61ba14e4522b8637c9df1",
+    "en/challenges.html": "159251e22d005de126b3b6ac0fbed20d5449cfe002fb5dd80c62e57df99d12a8",
+    "en/chapters/01-mandate.html": "f93ef9a915fcae1c86313a822b8a7d02e7b9488d6c7b9bfda022b4582c77febc",
+    "en/chapters/02-authority.html": "b294a39899b0a8c489139a9fc7600c57f41b1a3600c1ae6429f23bf70cf2f248",
+    "en/chapters/03-contract.html": "a92a500c602a529107417979f46a25d601f69bd1ca016dbdd7d41561c1b10dfe",
+    "en/chapters/04-delivery.html": "51e2903027eac06b8bb8c1bd5de0bf03f2e85f23c9f95e24f6e825a4b49c1315",
+    "en/chapters/05-evidence.html": "dc4994f5f06bde621436ff3d96b496e05bfd8e83757a1666b67a404af23a340e",
+    "en/chapters/06-documentation.html": "0e924663bbbf20128de30dd54c5fc1b9f7954a95a86d2bf15b8a939f58d734ad",
+    "en/chapters/07-llm.html": "a0b67bc0a936ed0e02f2e866b90d8601eb250fe6be2ab97140cd21304fe246ab",
+    "en/chapters/08-hygiene.html": "f548d4f39ae447bedb7d548bac6c2e31f2f7b57058917f3905a7727f27e54455",
+    "en/ecosystem.html": "4f4b6840905d91689e5e3f7c40ea234bc3eb1f1d7fccf1905a244ec8c30bfc9a",
+    "en/experiments.html": "1579af14203baa4c035c966a279a7ec14458ee844651eae45df59e620b55345d",
+    "en/governance.html": "9ba49758533a3d575133f867fdf49059cd2d8de600462f131a3f1084341eed26",
+    "en/guides/api-verification.html": "769520136264752f1ba434b9478f1f5f2fc6b7cd4c6d3eded9913d58e72730bf",
+    "en/guides.html": "8c4ee99a811f900cb8cb61fc94c7813d93c6ffd5024884301035f2b9eb197c98",
+    "en/hub.html": "af17eedb1b12f0048c2887d8254856480867be6786b4a64996ab61f75614b4ca",
+    "en/index.html": "73f04ee6c95f4f9797f7f241b63547842ce8a1261383826e3e708ab88930cb60",
+    "en/labs/01-change.html": "5984c87d01e63d171773ea6e0717849e40b80a22d70f7c1c1493cb9762092c0d",
+    "en/labs/02-api.html": "9898efc25942b9f5658b1a4af610e8b946be3f80ac59d7d02f96a6754a33efc7",
+    "en/labs/03-workspace.html": "143e40485cfa70bf7de6d2e64608d627cecfb5e3b6562acbebe9cd709be5c3db",
+    "en/projects/gnosix/evidence.html": "83bf6ad5bd6cd8a8057b4b148c2cb05b7e527997caea49b6caa7948e1f6c5e3c",
+    "en/projects/gnosix/index.html": "e32b489b32847bc591e5f76657f9c2d16fbb4166180689478fd87b12fc0cb5a6",
+    "en/projects/gnosix/methodology.html": "0491fbb7e6a9c86b658ff95750e52265f2f7b2e36328f182f54e901364cb2c89",
+    "en/projects/gnosix/overview.html": "8ebab3f63965dd139cf38935f6862cb7f4ab6a5249d4e067f8d9eb1c0eed4455",
+    "en/projects/gnosix/roadmap.html": "b8e4db6937498a152d1b2a48e30c50516e0cbe75bd2383ce8ca03b22321cb224",
+    "en/projects/gnosix/status.html": "1de70df00e871b1c752d358d1744e348bd50c74f8df8ad7431b8dfdc6e92a455",
+    "en/projects/gnostral/architecture.html": "62c0c95d57a3aee2b5be9991219af5155ef94f86dc2c0ae6c4b20b3383d0115a",
+    "en/projects/gnostral/capabilities.html": "5561f88697b267531c0f7fe510ef9dda898a4f6b2f46c8aef4aa526b02df112a",
+    "en/projects/gnostral/index.html": "e2df05eec6b2fd235b0f3101e0435c106cc0abe4662fdfd8ac6d00524df2ec08",
+    "en/projects/gnostral/overview.html": "46d9a9627dba6f0c566e2e4f6d847d02df8e660d5c12cbec47b9a33ddb87eba4",
+    "en/projects/gnostral/questlog.html": "6fb9eef8b8ec19f3b9181d403bdee3ab626286b359a32690d513fa43e0c25db1",
+    "en/projects/gnostral/reproducibility.html": "5052c5bb7db449cdc522cbf0a1672f870fd55999ef00467e2b15ef0216b3bf98",
+    "en/projects/gnostral/roadmap.html": "9fff5ca58e561faf371588e2577e727bdec163f6120ecd4a63130f9d91bedd1e",
+    "en/projects.html": "b937da435bcb2e07434ff9e1ae57b5def92bfba1deeddd195ad7b2938f8d7f32",
+    "en/references.html": "11fb1b1fc9973b1f99b5c152c55cef42d1e170c18de3ae31327cc7f67c5b298d",
+    "en/releases.html": "d9f3a43614b3aa2e01a0dd2ebb2832ec550d95ebfff27b23667565dd69fdbb27",
+    "en/sdk.html": "346274bdfb4f3d7269d8ce7c695caf81c4eee3f18881a314e86bd30949d5463d",
+    "en/studies/cuda-05d.html": "ca8114aaa1f9fdeb066edef43048b085faf81c16d42658f194aa2dcde42e9c90",
+    "en/studies/cuda-05e.html": "2a22a9d60a6a4a194f84c9ae289006742ce6c4de1ab9a5d60a3a9960fe653ebe",
+    "en/studies/cuda-05f.html": "b435a0677d0264de62198b1d6ef557afc16beba78ab74476a4c5fa13a422667b",
+    "en/studies/cuda-05g.html": "cafb7f174e62372062c4c494e270e18d9aff5c8c117dc37aa9dfcad54ae78ebb",
+    "en/studies/cuda-05h.html": "09476a83455720bc4e672b774b9f352e1dcf30ed253f8398ea7923d22ab3b94b",
+    "en/studies/gnostral-rtx3070.html": "758e1e84e0bf29159818a47c6ce93583996c360004b4942f6a0464634ac8d07b",
+    "en/templates.html": "4e8d350a20a30aae0ff523777872e4d20004b43afed5e31b98dd526fdfb904dc",
+    "en/topologies.html": "e124ce531ceb007ac874f4ce76aaf777cba12fcaafcc8fdfdaf5356d24661ff8",
+    "evidence/cuda-05d-manifest.json": "7c705e2d3eeeb0dfc833b6c1607d4cc49a77d4d3fd8cd7cd65c95d64a85688d3",
+    "evidence/cuda-05d-public-results.json": "043ef2a36ae1a71dc7f63062f2a2f0c7e85d7611533a90f464ec350f2f7db078",
+    "evidence/cuda-05e-public-results.json": "67d191db25c00cf5e7a6cb58d7143e79bc7962a90c523c1f458dffc15dbd0a21",
+    "evidence/cuda-05f-manifest.json": "8dcbfaf415d110d9ca5827fca8380f6a34c58ca6aefe9ae4c8717bfa8554ceb5",
+    "evidence/cuda-05f-public-results.json": "36c46412207e6a77f5730f52f1e35aa5dcab3aa06bf0a5e1224ce1fe4e44e903",
+    "evidence/cuda-05g-public-results.json": "0e8eaf75069d7be184a6f0798452acb5a4591ab7a43544afedb336185682690f",
+    "evidence/cuda-05h-public-results.json": "402f09bfa16070911e206eee517d791e9431aff283effe83df92542c556698f3",
+    "evidence/gnostral-rtx3070-public-results.json": "62ee9613a1928f3bbed34c4c7cd3c52ad513ff3ed6c76312c4ebb08b47b565e6",
+    "examples/api_lab.py": "ec71ab2068cf7c405621a035bed47dba1f9809393c478334256ccd06244591f8",
+    "examples/change_lab.py": "66fcd091424bf729afe779b10e6e41eb126948037af0e79106d05ea3aa56c10a",
+    "examples/workspace_lab.py": "5d7fb12447eca70da7db2967df12a998de13208e7bedeb35396abe57009854fb",
+    "experiments/GPU-EVIDENCE-CONTRACT-v1.json": "9af8d1f9222c4be0a3e7febbe6c4318eba069fd540ae2c0de848f8aa766a1761",
+    "experiments/PIPELINE.md": "2d8fd01873ed55ece33f95d92e56a5793cc5e585e22ce6f93c8c45f9eca0e2ae",
+    "experiments/registry.json": "50ab7df939404ffd394a687774b6e6661355c2318c9af861da371b57fc01105c",
+    "fr/api.html": "827db7ac4d0b7126a3f69d827ff23342bc49cff15402fcee43bdfd7a3c035807",
+    "fr/challenges.html": "fedf495677f559e61cd17409ca65da35af9ac150dc5ac0afa8be4f6760017580",
+    "fr/chapters/01-mandate.html": "f1ac6f3100f955216f144a579b2b8248b489b9c98ef3434a66b2b2a49a7dd195",
+    "fr/chapters/02-authority.html": "a75fa839f16b0373e0c74a036c8b6288c5bcdda5793c1be4c65d2640829d525c",
+    "fr/chapters/03-contract.html": "75296c8d9a66793cae5c9b366d93ec57d10861190e743ade9f7be64a7de917a9",
+    "fr/chapters/04-delivery.html": "31b41553ef0f35ae3114c37b596582b4cf64cb5253baa1dead811d5ce75d6650",
+    "fr/chapters/05-evidence.html": "a71808d458ad227b3840b7a2a9e67055ace82469678943eee31ba62eefd3bdda",
+    "fr/chapters/06-documentation.html": "ad7a5bb7aebb14c98dbf5c0398ace6f3eb8653d22f1a4f213b814a9bb07c54b0",
+    "fr/chapters/07-llm.html": "18fed6fb5020809f8e5a68f3fdbdad2ab84b79055baff26238d9309d13a78ef5",
+    "fr/chapters/08-hygiene.html": "ab78c572286af1d488843a37dcc1e7630aaeb9a2d60a1595a3e67c4ef5554d4a",
+    "fr/ecosystem.html": "61f55e11c3b323492b89fb9670b42ab1af33b948c9c7c568030b67a8349d46e6",
+    "fr/experiments.html": "e8f10be17aa89287f75978c80cc92017361bfe80fabe3eed88449c8cdd66167f",
+    "fr/governance.html": "af6a5a408c3846adeef37853f15791f00ba1bb72543d4110381ca66e21000433",
+    "fr/guides/api-verification.html": "29b6ef17de483134e7e105b5d3148188de276a7828ec0fe25ee586100b437a0f",
+    "fr/guides.html": "9b449715de2ed77d7cb85029fa20699ddd0c0e46d78a9f85bbe86d6915777260",
+    "fr/hub.html": "1a6146d10c7225d18eb2e9472afa4169182c9d146058298f4375566754ef5b71",
+    "fr/index.html": "d8021093ed268e7a68cc3cc33b13045a443d7c921339b1e26d5b4897a8c8b559",
+    "fr/labs/01-change.html": "fb4eb465cbb7125460fcd587af619cad120939f964b598b0ddb54002f566269e",
+    "fr/labs/02-api.html": "53a841951ce23836c671a2fe9a16d6b79d10b47180a08046b5afadca93fe3399",
+    "fr/labs/03-workspace.html": "3961727c1c06d455b4b9a0158ec94c19f4f74499019706f160375ddfa3813b3f",
+    "fr/projects/gnosix/evidence.html": "5cdf5d6bef45ae06f1f4e6ed583bc21e9ebb6f27942f0172ee83675b4c530882",
+    "fr/projects/gnosix/index.html": "c631b16edfb808ba520796f73933eac81ab2a83fce029c774695092afe3247f5",
+    "fr/projects/gnosix/methodology.html": "61b5f12e5d379365f53989785b853fd62218e1ecdeafc068fcba9dc6cdbfcb53",
+    "fr/projects/gnosix/overview.html": "cbeec605bbe19c4bdcf946e52f19b2d6fa48ebacb381b15343c1f1731e24debe",
+    "fr/projects/gnosix/roadmap.html": "620cfa69a0cdf2b6cb7024d0f0a05b083354e41669c94e2314159479d349d774",
+    "fr/projects/gnosix/status.html": "d77ba60459f7ef4c3a316c844d76a3b4eb85c26a6b398cccda3b12fefdd0cbcf",
+    "fr/projects/gnostral/architecture.html": "68403a12038f7ffddb9c0c5b9d2ba258cef06fa8f66294f716c123f8fa5c16f4",
+    "fr/projects/gnostral/capabilities.html": "858207c40d295e284401cf2c45c2dfbb466977d579e345479a3a0a4c798ca7cc",
+    "fr/projects/gnostral/index.html": "49606a7c1199422b47e69603b0c02471e4dcfed9318846edc54b2d2ec8fd783a",
+    "fr/projects/gnostral/overview.html": "7ec17c791b239528dada6069a95469caaf67a219c3b6cb3b9d021cce4cbd1840",
+    "fr/projects/gnostral/questlog.html": "0d1ea9ccc9cd9042c6c3d617a404c8b9efaf8d400cbb269d7bb6d9f118d471e1",
+    "fr/projects/gnostral/reproducibility.html": "9d09caed5b7e3da7ca10c182421d8f2e67a46d4fdfb11386d11624ab2794d0af",
+    "fr/projects/gnostral/roadmap.html": "5a20bf9f100cc936fe888ddd1bab46d974983e1ad9ea6de535062ac5142dc6e7",
+    "fr/projects.html": "2495d622a029e172d54f7d8a79e8b4a60554971d3e343dbbfc09c0a224bce8d0",
+    "fr/references.html": "264f23f795b90fd3b027e15d5e5d435bb0742d6052b98d77581dfd48feb3cb68",
+    "fr/releases.html": "d536731800ff6efb28a0a4158d88c943fb135cc08c38d38adbdef510b4f97c05",
+    "fr/sdk.html": "6c23c9aaa37202e95637bbaf643d684a66d80212359e316ea77e5a226f3ae0c1",
+    "fr/studies/cuda-05d.html": "8fe819c1b2d9c504ea54eaddaa66c2f3231a00deed07e12ed07794d97253a1f3",
+    "fr/studies/cuda-05e.html": "0a593ee774c033e58071434db8ee134c43718738714d25e6cf3f98db98677312",
+    "fr/studies/cuda-05f.html": "f82b0ea07cbfb47fffcced8c6b460fab78650c6093a917d30719eeda54334fdc",
+    "fr/studies/cuda-05g.html": "0760f07bbc5d8e1a760d3d8814b1f019574c0776cc25638a822cc8e00530e0f7",
+    "fr/studies/cuda-05h.html": "f08132a30ea6ee3e2870fc43ab67418b6c8d1130c4e5238fe24e8ac317c5ce1f",
+    "fr/studies/gnostral-rtx3070.html": "0a316c195e8d094518c2c5663a3a9e02e0d78eb024408706f9c67e3060435cc2",
+    "fr/templates.html": "6d4ebd8a14c0f24b5714e4beee5bd2df7c226d090097a6a0781d49997d7156c8",
+    "fr/topologies.html": "b19eee6624f41f239f7f718905fea1580ce62f7b881b877b70018a4477d3d65c",
+    "gnu6/fonts/SpaceGrotesk-OFL.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+    "gnu6/fonts/SpaceGrotesk-wght.woff2": "8e085aa438094f11487a836652edd5c054fa6a96f63fc7c282105ee3a4b08c07",
+    "gnu6/gnu6-design.lock.json": "e28a19574ba8422480043f505f06937c98b133b8c536817e47f1fb368c883fc8",
+    "gnu6/gnu6.css": "d7f69afec1dabc1245177a4e8f887bc8e195c433baf722ec8322251da948c1f4",
+    "gnu6/icons/gnu6-live-180.png": "e82417e839092246e322ba0e74d5b82b9f7120020ce82064a68ea64fe73b1701",
+    "gnu6/icons/gnu6-live-32.png": "c10c5abb4970060ee678276d490c4d68f3323e4bf5e8ce221bb9261e61ac6e3e",
+    "gnu6/identity/gnu6-live-64.png": "ee00aee2578be41f855254b7d4053149fb690ad6588f6ea6547178a35a1444e4",
+    "gnu6/identity/gnuinlabs-128.png": "9473cc6a27593414066692ba51404925f556c62f5eeea4640826a0307f607438",
+    "gnu6/identity/gnuinlabs-256.png": "2ee276c5f90442735715a6d77d2fd7fc1c3de72d72e3d0ed9f08254d66319382",
+    "gnu6/identity/gnuinlabs-512.png": "563eb0587f384b808e3e1e05f4151f809b50da3122cee37c82a4417bebd1bdfc",
+    "gnu6/identity/gnuinlabs-64.png": "14b67e37a197156d5df65fec3bb3d27ed2405da3b427e862fd2489e912d21e0a",
+    "gnu6/social/docs-og.png": "2bdd3e304af4d36eee803f7bfb6a27db87ef4e23003748896448fd3dc12b8813",
+    "index.html": "1bbf64d0ab23e93a89b8c27286b940a2f91478b8a10659c342ccbc6d81dd73f2",
+    "mermaid/authority.mmd": "80e18bde535f74616bf75b4eaa1cf33bc2e5fa48d5c278aa39174e84b5b45404",
+    "mermaid/knowledge.mmd": "fae71fea6e3748a5e13bcfafd653c8d7dccec29287c588b1fa3718919207c022",
+    "mermaid/lifecycle.mmd": "88f85ee3424cdcff1fc33af7140f4c3ce4a69bddf2accfd1601ed564feddc38b",
+    "motion/g6-bar.js": "ef2712b01897279bf1bbe2cb04bf4886904efe5c5e6d9bfb9a8a81d4bd921ac0",
+    "motion/g6-motion.css": "b5bb58cce64e6c62f424a5b55e6eef474bac9097dbc062f7bf574d796923a569",
+    "motion/g6-motion.js": "137b55d4746c489c069cfd467d6f8c7d2365e3a99f68dd3d809c47a6fe9f1030",
+    "motion/g6-site-nav.css": "84d4811a22defec1a47e818f3dd0eb6186a8192e00bb33b668886df98fb5a333",
+    "motion/g6-site-nav.js": "e776c0a0905bb16aadb786b50a3728b565ffb03b1cba8fc5150a6abe4d465441",
+    "motion/global-nav.lock.json": "8c26e61a3c5920ee37938fff2a3bd343885b0a20e7ed0b00b5b8c5e4c13fb4ce",
+    "motion/glyph-sdf.png": "99ed714f3fc65799bf88334abc8440c3398da22444370e85a5bb608f260b37e3",
+    "motion/identity-rig.js": "8098e350de09d9bcc0fdeb6edfd058ea8d34d58fa103f64eee2bd190abdc76e7",
+    "motion/rig-data.js": "34a7b5754c5e636855f8526fcbe9cce4b13c777a0d1f9ad48c0c3b87ec4d94d4",
+    "registry/federation-gnosix.json": "0915a1916df9694971c7f06ebe05a01b4b80337cb92ec96ffbb4ea2582943d52",
+    "registry/federation-gnostral.json": "3822393cfe3063d5a8321d571cdbc39ce08d65eda206d0c2a73ed7f8152714f0",
+    "registry/guide-catalog.json": "5ad769338481afbc738494117fc0ef729af8120c8a82b943dac6ff2972c8e309",
+    "registry/release-catalog.json": "d7d3467decd5234b28b15e28a810fc929f9f7dafa41fda4e16d443c1c5c65254",
+    "registry/source-catalog.json": "a0bdf5e442d42369b955169dd2d97e3d6799078efbfba07fb0c528bb40363487",
+    "spine-map.js": "43971ae8ef5641a266305338d16ca18ff7b5e796bfc6bfbe9d2efb1303b3b323",
+    "spine.css": "e580786958a84a9a36cb3cbbf68351aa897a1f6472806d2698954a0f49ac50a9",
+    "spine.js": "61e1cc184cb49d823c021f54b4ad461eef8c15f687be1621b0f83fa58a0d113f",
+    "style.css": "ecaa7c9769561949e5da334912630445f9ed60791cc7d5dd28b3f4584a8c9e84",
+    "templates/ADR.md": "5c032c015de91936dadd43a4ef4bb0dfbc9acba39304befc1a9a1b7583d10e9e",
+    "templates/CONTRACT.md": "4ee8ddda9f51a40c2631cbeb7f410999f309137b60ce9a1bc03cc247d9f0b9a0",
+    "templates/EVIDENCE.json": "3ce279278196dd4562b29984ccd00050160c6abcaec690b784b9741ecd2f0715",
+    "templates/EXPERIMENT.md": "a366aa1126cb7da3874144b698024dff7058714fbfa61e7dde0affe6e002c2e8",
+    "templates/MANDATE.md": "f9b73dc95da434a50b21d1c60285e4685464bc99eea88b0b60737bf47df8df16",
+    "templates/RELEASE.md": "2d1950e2f1ac8a37c88b77681544896c34e49080601b769557c91d31b59f2fc5"
+  },
+  "wheel_sha256": {
+    "markdown_it_py-4.0.0-py3-none-any.whl": "87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147",
+    "mdurl-0.1.2-py3-none-any.whl": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+    "pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl": "c458b6d084f9b935061bc36216e8a69a7e293a2f1e68bf956dcd9e6cbcd143f5"
+  }
 }
