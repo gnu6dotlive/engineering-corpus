@@ -1,0 +1,53 @@
+name: contract
+
+# The design system this repository honours, checked at the version this
+# repository declares. The corpus is the model repository: the gate that
+# says so is the system's own, at that version, and it is not copied here. The gate is the system's own: it is checked out at
+# that version, not copied here, because a copy is a copy that goes stale
+# and a stale gate is a gate that lies.
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Read the version of the system this repository honours
+        id: version
+        run: |
+          version="$(python3 -c "import json;print(json.load(open('gnosix.json'))['version'])")"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "the system honoured: $version"
+
+      # The system is cloned beside the repository, not inside it. The gate
+      # scans the consumer's tree, and a checkout of the system in that tree
+      # made it scan the system's own record: the adopted sheet, the audit
+      # that quotes the field's colours, the demo. It read twenty-eight
+      # colours that were never the consumer's.
+      - name: Clone the design system at that version, beside the repository
+        run: |
+          git clone --quiet --depth 1 \
+            --branch "v${{ steps.version.outputs.version }}" \
+            https://github.com/tension-atoi/gnosix.ds \
+            "$RUNNER_TEMP/gnosix.ds"
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14'
+
+      - name: Install the gate's dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r "$RUNNER_TEMP/gnosix.ds/requirements.txt"
+
+      - name: The consumer gate
+        run: python3 "$RUNNER_TEMP/gnosix.ds/tools/consumer_check.py" --consumer . --check

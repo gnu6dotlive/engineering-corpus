@@ -1,0 +1,8 @@
+{
+  "schema": "gnosix_DS.consumer.v1",
+  "system": "gnosix.ds",
+  "version": "4.2.1",
+  "vendored": "site/gnu6",
+  "lock": "site/gnu6/gnu6-design.lock.json",
+  "note": "This consumer honours the gnosix design system. The package is vendored at the version above and locked; the sheet names the system's own roles and tokens and carries no colour of its own. The corpus is the model repository: it shows the system's arrangements and declares no component of its own."
+}

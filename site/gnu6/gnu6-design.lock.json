@@ -1,11 +1,11 @@
 {
   "package": "gnu6-design",
-  "version": "4.0.0",
+  "version": "4.2.1",
   "source": "gnosix.ds — packaging/gnu6-design, re-cut from the contract",
   "files": {
     "fonts/SpaceGrotesk-OFL.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
     "fonts/SpaceGrotesk-wght.woff2": "8e085aa438094f11487a836652edd5c054fa6a96f63fc7c282105ee3a4b08c07",
-    "gnu6.css": "a7bf970318825aa8404ba4e09cf73aa9892cab15c14c0509e521ba1f2ff66d96",
+    "gnu6.css": "d7f69afec1dabc1245177a4e8f887bc8e195c433baf722ec8322251da948c1f4",
     "icons/gnu6-live-180.png": "e82417e839092246e322ba0e74d5b82b9f7120020ce82064a68ea64fe73b1701",
     "icons/gnu6-live-32.png": "c10c5abb4970060ee678276d490c4d68f3323e4bf5e8ce221bb9261e61ac6e3e",
     "identity/gnu6-live-64.png": "ee00aee2578be41f855254b7d4053149fb690ad6588f6ea6547178a35a1444e4",
