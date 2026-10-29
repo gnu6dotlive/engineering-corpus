@@ -16,8 +16,9 @@ The corpus is intended to expand beyond engineering methods. Future editions may
 
 ## Documentation hub (DOCS-HUB-01D)
 
-The root of **[docs.gnu6.live](https://docs.gnu6.live/)** opens the French
-documentation hub. English is at `/en/hub.html`. The **Corpus Méthodologique
+The documentation hub opens in French at `/fr/hub.html`; English is at `/en/hub.html`.
+The `docs.gnu6.live` host is offline for now: the built hub is in [`dist/`](dist/)
+([FR](dist/fr/hub.html), [EN](dist/en/hub.html)), its sources in [`docs/`](docs/). The **Corpus Méthodologique
 & Hygiène Mental** is still independent and its study progression is unchanged.
 
 | Public route | Meaning |
@@ -98,14 +99,14 @@ No database, no SaaS, no external fonts, no analytics, no remote scripts, no use
 
 MIT for the original content and software in this repository (see [LICENSE](LICENSE)). External tools and references retain their respective licenses. Attribution to external projects does not imply endorsement.
 
-**Publication state:** documentation hub live at [docs.gnu6.live](https://docs.gnu6.live/), corpus study edition under [FR](https://docs.gnu6.live/fr/index.html) and [EN](https://docs.gnu6.live/en/index.html). The curriculum remains draft; infrastructure operation is not normative adoption.
+**Publication state:** the `docs.gnu6.live` host is offline; the built hub and the corpus study edition ([FR](dist/fr/index.html), [EN](dist/en/index.html)) are kept in [`dist/`](dist/). The curriculum remains draft; infrastructure operation is not normative adoption.
 
 ## CORPUS-01 study edition
 
 Eight proposed methods (EC-M01–08), three executable fictional labs (EC-L01–03),
 FR/EN governance and source references. All methods remain draft; see the
 [editorial review](reviews/CORPUS-01-editorial.md) and [publication handoff](reviews/CORPUS-01-publication.md).
-The current edition is available inside **docs.gnu6.live**. The hub indexes SDKs, APIs, Guides and Releases as future areas only until public, versioned sources are qualified.
+The current edition is built into [`dist/`](dist/). The hub indexes SDKs, APIs, Guides and Releases as future areas only until public, versioned sources are qualified.
 
 ### Local checks
 
